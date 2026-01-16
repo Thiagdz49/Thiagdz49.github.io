@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contatos</title>
+
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/navBar.css" />
+    <link rel="stylesheet" href="src/css/pageBody.css" />
+    <link rel="stylesheet" href="src/css/contact.css" />
+
+    <script src="src/js/sendEmail.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="sideNavbar">
+        <a href="index.html">
+          <img src="src/img/logoLiteDevTools.svg" alt="logo" class="logo" />
+        </a>
+
+        <div class="name">LiteDevTools</div>
+
+        <nav>
+          <ul class="nav">
+            <a href="index.html">
+              <li id="homePage">
+                <span>Página Principal</span>
+              </li>
+            </a>
+
+            <a href="aboutUs.html">
+              <li id="aboutUs">
+                <span>Sobre nós</span>
+              </li>
+            </a>
+
+            <li id="products" onclick="toggleContent()">
+              <span class="expandable-link"> Ferramentas </span>
+              <div id="toolsContent" class="expandable-content">
+                <a href="products.html" style="color: blue">Todas</a>
+                <a href="tools/hexadecimalConverter.html"
+                  >Conversor Hexadecimal e Decimal</a
+                >
+                <a href="tools/binaryConverter.html"
+                  >Conversor Binário e Decimal</a
+                >
+                <a href="tools/octalConverter.html"
+                  >Conversor Octal e Decimal</a
+                >
+                <a href="tools/base64.html">Conversor Base 64</a>
+                <a href="tools/temperatureConverter.html"
+                  >Conversor temperatura</a
+                >
+                <a href="tools/json.html">Formatar Json</a>
+                <a href="tools/cpf.html">Gerador de CPF</a>
+                <a href="tools/prime.html">Verificar número primo</a>
+                <a href="tools/circulo.html">Cálculos Circunferência</a>
+                <a href="tools/juros.html">Cálculo Juros Compostos</a>
+                <a href="tools/loren.html">Gerador de Lorem</a>
+                <a href="tools/cordenadas.html">Consultar Coordenadas</a>
+                <a href="tools/cont.html">Contador Caracter e palavra</a>
+                <a href="tools/converteRGB.html">Conversor de RGB para HEX</a>
+              </div>
+            </li>
+
+            <a href="contacts.html">
+              <li id="contacts" class="active">
+                <span>Fale conosco</span>
+              </li>
+            </a>
+          </ul>
+        </nav>
+
+        <span id="copyright"> LiteDevTools &copy; 2025 </span>
+      </div>
+
+      <div id="pageBody">
+        <div class="configurations">
+          <img
+            src="src/img/settings-gear.svg"
+            alt="configurações"
+            id="configGear"
+          />
+          <div class="configDropdown" id="configDropdown">
+            <select name="themeChoice" id="themeChoice">
+              <option value="light">Tema claro</option>
+              <option value="dark">Tema escuro</option>
+              <option value="contrast">Alto Constraste</option>
+            </select>
+            <select name="fontChoice" id="fontChoice">
+              <option value="small">Fonte pequena</option>
+              <option value="mid">Fonte normal</option>
+              <option value="big">Fonte grande</option>
+            </select>
+            <br />
+          </div>
+        </div>
+        <h1 class="title darkBlue">Fale conosco</h1>
+        <div id="feedbackWrapper">
+          <div class="sidewaysSectionOrganizer generalText">
+            <section class="emailContact" style="color: var(--text-color)">
+              <form id="emailForm">
+                <span class="generalText"
+                  >Entre em contato por liteDevTools@gmail.com:*</span
+                >
+                <br /><br />
+                <label for="subject">Assunto:</label><br />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                /><br /><br />
+
+                <label for="body">Mensagem:</label><br />
+                <textarea
+                  id="body"
+                  name="body"
+                  rows="5"
+                  cols="40"
+                  required
+                ></textarea
+                ><br /><br />
+
+                <button id="emailButton" type="button" onclick="sendEmail()">
+                  Enviar e-mail
+                </button>
+              </form>
+            </section>
+
+            <section class="otherContact">
+              <p>
+                Whattsapp:*
+                <br />
+                +55 (015) 12345-6789
+              </p>
+              <p>
+                Instagram:*
+                <br />
+                @litedevtools
+              </p>
+            </section>
+          </div>
+        </div>
+        <span class="redSmallWarning">*Contatos ficticios </span>
+      </div>
+    </div>
+    <script src="src/js/toolsDropdown.js"></script>
+    <script src="src/js/theme.js"></script>
+    <script src="src/js/font.js"></script>
+    <script src="src/js/config.js"></script>
+    <script src="src/js/navbarSize.js"></script>
+  </body>
+</html>

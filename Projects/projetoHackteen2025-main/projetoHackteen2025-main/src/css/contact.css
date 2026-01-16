@@ -1,0 +1,78 @@
+#feedbackWrapper {
+  background-color: var(--division-color);
+
+  padding: 20px;
+  margin: 20px 0 40px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px var(--shadow-color);
+  transition: box-shadow 0.3s ease;
+}
+#feedbackWrapper:hover {
+  box-shadow: 0px 0px 7px 4px var(--hover-shadow-color);
+}
+
+.otherContact {
+  padding: 0 20px;
+  border-left: 2px solid #ccc;
+}
+
+.sidewaysSectionOrganizer > * {
+  padding: 0 10px;
+}
+
+@media (max-width: 970px) {
+  .sidewaysSectionOrganizer {
+    flex-direction: column;
+  }
+  .otherContact {
+    border-top: 2px solid #ccc;
+    border-left: none;
+  }
+}
+
+#emailForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#subject,
+#body {
+  width: 100%;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  box-shadow: 2px 2px 2px 1px rgba(60, 60, 60, 0.412);
+}
+
+#subject {
+  height: 2em;
+}
+
+#emailButton {
+  width: 145px;
+  height: 62px;
+  align-self: center;
+  margin-top: 20px;
+
+  background-color: #ffffff9e;
+
+  font-size: 0.9em;
+  line-height: 1.6em;
+  color: #555;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 2px 1px rgba(60, 60, 60, 0.412);
+}
+
+#emailButton:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+
+.emailContact {
+  color: var(--text-color);
+}

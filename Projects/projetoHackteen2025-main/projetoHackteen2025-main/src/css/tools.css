@@ -1,0 +1,48 @@
+#pageBody {
+  margin-left: 80px;
+}
+
+@media (max-width: 850px) {
+  #pageBody {
+    margin-left: 25px !important;
+  }
+}
+
+input,
+textarea {
+  height: 2.2em;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  box-shadow: 2px 2px 2px 1px rgba(60, 60, 60, 0.412);
+}
+textarea {
+  height: 150px;
+  width: 300px;
+}
+
+button,
+select {
+  height: 2.2em;
+  background-color: #ffffff9e;
+
+  font-size: 0.9em;
+  line-height: 1.6em;
+  color: #555;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 2px 1px rgba(60, 60, 60, 0.412);
+
+  cursor: pointer;
+}
+
+.division {
+  padding: 60px;
+}
+
+.generalText {
+  margin: 0;
+}

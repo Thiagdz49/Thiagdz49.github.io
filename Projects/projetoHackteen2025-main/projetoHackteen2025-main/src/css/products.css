@@ -1,0 +1,69 @@
+#toolsList {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(294px, 1fr));
+  gap: 20px;
+  width: 80%;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  --h: 110px;
+  height: var(--h);
+  width: 100%;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+
+  background-color: white;
+
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.toolWrapper:hover .tool {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.toolWrapper:active .tool {
+  transform: scale(0.95);
+}
+
+.tool:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.toolImage {
+  height: calc(var(--h) - 30px);
+  width: auto;
+  padding: 0 20px;
+  width: 120px;
+  
+}
+
+.tool p {
+  color: rgb(35, 35, 35);
+  font-weight: bold;
+  font-size: 1.15em;
+  padding: 20px;
+}
+
+@media (max-width: 690px) {
+  .tool {
+    --h: 80px;
+    font-size: 1.3em;
+  }
+}
+
+#toolsList a {
+  text-decoration: none;
+  display: block;
+}
+
+#searchFeedback {
+  display: none;
+}

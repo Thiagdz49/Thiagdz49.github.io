@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor Base 64</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/pageBody.css" />
+    <link rel="stylesheet" href="../src/css/tools.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="pageBody">
+        <div class="configurations">
+          <img
+            src="../src/img/settings-gear.svg"
+            alt="configurações"
+            id="configGear"
+          />
+          <div class="configDropdown" id="configDropdown">
+            <select name="themeChoice" id="themeChoice">
+              <option value="light">Tema claro</option>
+              <option value="dark">Tema escuro</option>
+              <option value="contrast">Alto Constraste</option>
+            </select>
+            <select name="fontChoice" id="fontChoice">
+              <option value="small">Fonte pequena</option>
+              <option value="mid">Fonte normal</option>
+              <option value="big">Fonte grande</option>
+            </select>
+            <br />
+          </div>
+        </div>
+        <a
+          href="../products.html"
+          style="margin-right: auto; margin-left: 30px"
+        >
+          <button>Voltar para Ferramentas</button>
+        </a>
+        <h1 class="title" style="margin-bottom: 30px">
+          Conversor Base 64 e Texto
+        </h1>
+
+        <div class="generalText division" style="text-align: center">
+          <h2>Texto para Base 64</h2>
+          <textarea
+            id="textoInput"
+            rows="4"
+            cols="50"
+            placeholder="Digite o texto..."
+          ></textarea
+          ><br />
+          <button onclick="converterParaBase64()">Converter</button>
+          <p
+            id="resultadoBase64"
+            style="margin-top: 15px; font-weight: bold; word-break: break-word"
+          ></p>
+
+          <hr
+            style="
+              margin: 40px auto;
+              width: 60%;
+              border: none;
+              border-top: 1px solid gray;
+            "
+          />
+          <h2>Base 64 para Texto</h2>
+          <textarea
+            id="base64Input"
+            rows="4"
+            cols="50"
+            placeholder="Digite o base64..."
+          ></textarea
+          ><br />
+          <button onclick="converterParaTexto()">Converter</button>
+          <p
+            id="resultadoTexto"
+            style="margin-top: 15px; font-weight: bold; word-break: break-word"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../src/js/base64.js"></script>
+    <script src="../src/js/theme.js"></script>
+    <script src="../src/js/font.js"></script>
+    <script src="../src/js/config.js"></script>
+  </body>
+</html>
